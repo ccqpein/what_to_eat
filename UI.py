@@ -5,7 +5,7 @@ import sys
 import os
 
 try:
-    from PyQt4 import QtCore, QtGui, uic   
+    from PySide import QtCore, QtGui
 except ImportError:
     print("没有Qt模块，将在命令行操作")
     os.system("python " + sys.path[0] + "/main.py")
@@ -14,8 +14,12 @@ except ImportError:
 from StoreData import store_list, all_store, store_init, add_new_store
 from main import main
 
+# Qt module has abandon
+'''
 qtCreatorFile = sys.path[0] + "/UIView.ui" # Enter file here.
-Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)
+Ui_MainWindow, QtBaseClass = uic.loadUiType(qtCreatorFile)'''
+
+from UIView import Ui_MainWindow
 
 class MyApp(QtGui.QMainWindow, Ui_MainWindow):
     """define UI init"""

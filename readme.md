@@ -8,8 +8,10 @@
 
 # 依赖
 
-需要pyqt4做UI模块，如果没有的话，可以在命令行里直接使用
+~~~需要pyqt4做UI模块，如果没有的话，可以在命令行里直接使用~~~
+
+取消了qt的要求，因为PyQt和Sip安装太麻烦，替代方案是安装`PySide`，运行`pip install -r requirements`
 
 # todo
 
-UI完善
+打包程序
